@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name rascsi_din)(type KiCad)(uri "$(KIPRJMOD)/rascsi_din.pretty")(options "")(descr ""))
+  (lib (name SparkFun-Connectors)(type KiCad)(uri "C:/Program Files/KiCad5/share/kicad/modules/SparkFun-Connectors.pretty")(options "")(descr ""))
+)

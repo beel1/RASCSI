@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name rascsi_din-rescue)(type Legacy)(uri ${KIPRJMOD}/rascsi_din-rescue.lib)(options "")(descr ""))
+  (lib (name sparkfun-connector)(type Legacy)(uri "C:/Program Files/KiCad5/share/kicad/library/SparkFun-Connectors.lib")(options "")(descr ""))
+)
