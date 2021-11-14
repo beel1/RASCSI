@@ -1,0 +1,18 @@
+Reference(s),Footprint,Quantity,Value,Radiospares PN,LCSC PN,Mouser PN,Datasheet
+J2,50-PIN-CENTRONICS-F,1,50-PIN-CENTRONICS-F,239-1184,,,
+"C4,C3,C2,C1",C_Disc_D5.0mm_W2.5mm_P2.50mm,4,100nF,,,,
+D1,D_DO-41_SOD81_P10.16mm_Horizontal,1,1N4004,,,833-1N4001-TP,
+"R1,R2",R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal,2,330 ohms,,C61290,,
+"RN4,RN6",R_Array_SIP10,2,330 ohms,,,652-4610X-1LF-330,http://www.vishay.com/docs/31509/csc.pdf
+"RN2,RN1",R_Array_SIP10,2,10k ohms,,,652-4610X-1LF-10K,http://www.vishay.com/docs/31509/csc.pdf
+"U1,U2,U4,U3",DIP-20_W7.62mm,4,SN74LS641-1N,,,,http://www.ti.com/general/docs/suppproductinfo.tsp?distId=26&gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fsn74ls641
+J3,Multicomp_MC9A12-5034_2x25x2.54mm_Straight,1,2x25x2.54mm_Straight,,,,
+F1,0204_7,1,R-US_0204_7,,C377296,576-0251001.NRT1L,
+J5,Socket_Strip_Straight_1x04_Pitch2.54mm,1,RTC I2C Header (MH DS3231),,,,
+"RN5,RN3",R_Array_SIP10,2,220 ohms,,,652-4610X-1LF-220,http://www.vishay.com/docs/31509/csc.pdf
+J1,Socket_Strip_Straight_2x20_Pitch2.54mm,1,Raspberry_Pi_2_3,,,485-2223,https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf
+JP2,Pin_Header_Straight_1x02_Pitch2.54mm,1,Termination_Enable_5v,,C2333,,
+JP1,Pin_Header_Straight_1x02_Pitch2.54mm,1,Termination_Enable_GND,,C2333,,
+J4,Socket_Strip_Straight_1x05_Pitch2.54mm,1,OLED I2C Header (SSD1306 128x32 0.91in),,,,
+"D3,D2",LED_D5.0mm,2,LED,,,,
+J6,Pin_Header_Straight_1x02_Pitch2.54mm,1,Activity_LED_Header,,C2333,,
