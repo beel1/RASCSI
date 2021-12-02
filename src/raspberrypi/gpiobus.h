@@ -24,6 +24,7 @@
 //#define CONNECT_TYPE_FULLSPEC		// Full spec (SCSI logic, standard pin assignment)
 //#define CONNECT_TYPE_AIBOM		// AIBOM version (positive logic, unique pin assignment)
 //#define CONNECT_TYPE_GAMERNIUM	// GAMERnium.com version (standard logic, unique pin assignment)
+//#define CONNECT_TYPE_BEEL1		// CN50 version (SCSI logic, unique pin assignment)
 
 //---------------------------------------------------------------------------
 //
@@ -275,6 +276,50 @@
 #define	PIN_IO		4						// IO
 #define	PIN_BSY		27						// BSY
 #define	PIN_SEL		23						// SEL
+#endif
+
+#ifdef CONNECT_TYPE_BEEL1
+//
+// RaSCSI Adapter https://github.com/beel1/RASCSI/tree/master/hw/rascsi_CN50_IDC50 version
+//
+#define CONNECT_DESC "BEEL1"				// Startup message
+
+// Select signal control mode
+#define SIGNAL_CONTROL_MODE 0				// SCSI logical specification
+
+// Control signal pin assignment (-1 means no control)
+#define	PIN_ACT		10						// ACTIVE
+#define	PIN_ENB		5						// ENABLE
+#define PIN_IND		-1						// INITIATOR CTRL DIRECTION
+#define PIN_TAD		-1						// TARGET CTRL DIRECTION
+#define PIN_DTD		-1						// DATA DIRECTION
+
+// Control signal output logic
+#define ACT_ON		TRUE					// ACTIVE SIGNAL ON
+#define ENB_ON		TRUE					// ENABLE SIGNAL ON
+#define IND_IN		FALSE					// INITIATOR SIGNAL INPUT
+#define TAD_IN		FALSE					// TARGET SIGNAL INPUT
+#define DTD_IN		TRUE					// DATA SIGNAL INPUT
+
+// SCSI signal pin assignment
+#define	PIN_DT0		21						// Data 0
+#define	PIN_DT1		26						// Data 1
+#define	PIN_DT2		20						// Data 2
+#define	PIN_DT3		19						// Data 3
+#define	PIN_DT4		16						// Data 4
+#define	PIN_DT5		13						// Data 5
+#define	PIN_DT6		12						// Data 6
+#define	PIN_DT7		11						// Data 7
+#define	PIN_DP		25						// Data parity
+#define	PIN_ATN		24						// ATN
+#define	PIN_RST		27						// RST
+#define	PIN_ACK		23						// ACK
+#define	PIN_REQ		4						// REQ
+#define	PIN_MSG		17						// MSG
+#define	PIN_CD		15						// CD
+#define	PIN_IO		14						// IO
+#define	PIN_BSY		22						// BSY
+#define	PIN_SEL		18						// SEL
 #endif
 
 #define ALL_SCSI_PINS \

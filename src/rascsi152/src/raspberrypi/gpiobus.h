@@ -22,6 +22,7 @@
 //#define CONNECT_TYPE_FULLSPEC		// フルスペック(SCSI論理,標準ピンアサイン)
 //#define CONNECT_TYPE_AIBOM		// AIBOM版(正論理,固有ピンアサイン)
 //#define CONNECT_TYPE_GAMERNIUM	// GAMERnium.com版(標準論理,固有ピンアサイン)
+//#define CONNECT_TYPE_BEEL1		// CN50版(SCSI論理,固有ピンアサイン)
 
 //---------------------------------------------------------------------------
 //
@@ -29,7 +30,8 @@
 //
 //---------------------------------------------------------------------------
 #if !defined(CONNECT_TYPE_STANDARD) && !defined(CONNECT_TYPE_FULLSPEC) && \
-	!defined(CONNECT_TYPE_AIBOM) && !defined(CONNECT_TYPE_GAMERNIUM)
+	!defined(CONNECT_TYPE_AIBOM) && !defined(CONNECT_TYPE_GAMERNIUM) && \
+	!defined(CONNECT_TYPE_BEEL1)
 #define CONNECT_TYPE_FULLSPEC
 #endif
 
@@ -284,6 +286,50 @@
 #define	PIN_BSY		27						// BSY
 #define	PIN_SEL		23						// SEL
 #endif	// CONNECT_TYPE_GAMERNIUM
+
+#ifdef CONNECT_TYPE_BEEL1
+//
+// RaSCSI Adapter https://github.com/beel1/RASCSI/tree/master/hw/rascsi_CN50_IDC50版
+//
+#define CONNECT_DESC "BEEL1"				// 起動時メッセージ
+
+// 信号制御モード選択
+#define SIGNAL_CONTROL_MODE 0				// SCSI論理仕様
+
+// 制御信号ピンアサイン(-1の場合は制御無し)
+#define	PIN_ACT		10						// ACTIVE
+#define	PIN_ENB		5						// ENABLE
+#define PIN_IND		-1						// INITIATOR CTRL DIRECTION
+#define PIN_TAD		-1						// TARGET CTRL DIRECTION
+#define PIN_DTD		-1						// DATA DIRECTION
+
+// 制御信号出力論理
+#define ACT_ON		TRUE					// ACTIVE SIGNAL ON
+#define ENB_ON		TRUE					// ENABLE SIGNAL ON
+#define IND_IN		FALSE					// INITIATOR SIGNAL INPUT
+#define TAD_IN		FALSE					// TARGET SIGNAL INPUT
+#define DTD_IN		TRUE					// DATA SIGNAL INPUT
+
+// SCSI信号ピンアサイン
+#define	PIN_DT0		21						// データ0
+#define	PIN_DT1		26						// データ1
+#define	PIN_DT2		20						// データ2
+#define	PIN_DT3		19						// データ3
+#define	PIN_DT4		16						// データ4
+#define	PIN_DT5		13						// データ5
+#define	PIN_DT6		12						// データ6
+#define	PIN_DT7		11						// データ7
+#define	PIN_DP		25						// パリティ
+#define	PIN_ATN		24						// ATN
+#define	PIN_RST		27						// RST
+#define	PIN_ACK		23						// ACK
+#define	PIN_REQ		4						// REQ
+#define	PIN_MSG		17						// MSG
+#define	PIN_CD		15						// CD
+#define	PIN_IO		14						// IO
+#define	PIN_BSY		22						// BSY
+#define	PIN_SEL		18						// SEL
+#endif  // CONNECT_TYPE_BEEL1
 
 //---------------------------------------------------------------------------
 //
